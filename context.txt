@@ -1,0 +1,42 @@
+Get Started
+Quickstart
+Get started with MCP in less than 5 minutes
+MCP is a protocol that enables secure connections between host applications, such as Claude Desktop, and local services. In this quickstart guide, you’ll learn how to:
+
+Set up a local SQLite database
+Connect Claude Desktop to it through MCP
+Query and analyze your data securely
+While this guide focuses on using Claude Desktop as an example MCP host, the protocol is open and can be integrated by any application. IDEs, AI tools, and other software can all use MCP to connect to local integrations in a standardized way.
+Claude Desktop’s MCP support is currently in developer preview and only supports connecting to local MCP servers running on your machine. Remote MCP connections are not yet supported. This integration is only available in the Claude Desktop app, not the Claude web interface (claude.ai).
+​
+How MCP works
+
+MCP (Model Context Protocol) is an open protocol that enables secure, controlled interactions between AI applications and local or remote resources. Let’s break down how it works, then look at how we’ll use it in this guide.
+
+​
+General Architecture
+
+At its core, MCP follows a client-server architecture where a host application can connect to multiple servers:
+
+Internet
+Your Computer
+MCP Protocol
+MCP Protocol
+MCP Protocol
+Web APIs
+Remote
+Resource C
+MCP Host
+(Claude, IDEs, Tools)
+MCP Server A
+MCP Server B
+MCP Server C
+Local
+Resource A
+Local
+Resource B
+MCP Hosts: Programs like Claude Desktop, IDEs, or AI tools that want to access resources through MCP
+MCP Clients: Protocol clients that maintain 1:1 connections with servers
+MCP Servers: Lightweight programs that each expose specific capabilities through the standardized Model Context Protocol
+Local Resources: Your computer’s resources (databases, files, services) that MCP servers can securely access
+Remote Resources: Resources available over the internet (e.g., through APIs) that MCP servers can connect to
