@@ -1,3 +1,5 @@
+# src/frontend/app.py
+
 import json
 import logging
 
